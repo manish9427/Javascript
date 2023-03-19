@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- HTML code for the form -->
+    <form>
+      <label for="task-input">Task:</label>
+      <input type="text" id="task-input" />
+
+      <label for="priority-select">Priority:</label>
+      <select id="priority-select">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <button type="button" onclick="addTask()">Add Task</button>
+    </form>
+
+    <!-- HTML code for the table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Priority</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="task-table">
+        <!-- Table body will be dynamically populated -->
+      </tbody>
+    </table>
+  </body>
+</html>
+<script>
+  // JavaScript code for adding tasks to the table
+  function addTask() {
+    // Get the input values
+    const taskInput = document.getElementById("task-input");
+    const prioritySelect = document.getElementById("priority-select");
+
+    const task = taskInput.value;
+    const priority = prioritySelect.value;
+
+    // Create a new table row with the task, priority, and delete button
+    const newRow = document.createElement("tr");
+    newRow.innerHTML = `
+    <td>${task}</td>
+    <td>${priority}</td>
+    <td><button type="button" onclick="deleteTask(this)">Delete</button></td>
+  `;
+
+    // Append the new row to the table body
+    const tableBody = document.getElementById("task-table");
+    tableBody.appendChild(newRow);
+
+    // Clear the input fields
+    taskInput.value = "";
+    prioritySelect.value = "low";
+  }
+
+  // JavaScript code for deleting tasks from the table
+  function deleteTask(button) {
+    // Get the parent row element of the button
+    const row = button.parentNode.parentNode;
+
+    // Remove the row from the table body
+    const tableBody = document.getElementById("task-table");
+    tableBody.removeChild(row);
+  }
+</script>
