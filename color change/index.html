@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myElement">Hello, world!</div>
+    <button id="incrementBtn">+</button>
+    <button id="decrementBtn">-</button>
+  </body>
+</html>
+<script>
+  function colorControl(elementId, incrementBtnId, decrementBtnId) {
+    let colorIndex = 0;
+    const colors = ["red", "green", "blue", "orange", "purple"];
+    const element = document.getElementById(elementId);
+    const incrementBtn = document.getElementById(incrementBtnId);
+    const decrementBtn = document.getElementById(decrementBtnId);
+
+    function setColor() {
+      element.style.backgroundColor = colors[colorIndex];
+    }
+
+    incrementBtn.addEventListener("click", () => {
+      colorIndex++;
+      if (colorIndex >= colors.length) {
+        colorIndex = 0;
+      }
+      setColor();
+    });
+
+    decrementBtn.addEventListener("click", () => {
+      colorIndex--;
+      if (colorIndex < 0) {
+        colorIndex = colors.length - 1;
+      }
+      setColor();
+    });
+  }
+
+  colorControl("myElement", "incrementBtn", "decrementBtn");
+</script>

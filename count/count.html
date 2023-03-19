@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        box-shadow: 0px 0px 10px black;
+        width: 100px;
+        margin: 30px auto;
+        padding: 50px;
+      }
+      #total {
+        text-align: center;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="total">hii</div>
+      <br />
+      <div>
+        <button id="add">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="sub">Sub</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const total = document.getElementById("total");
+  var count = 0;
+  total.innerHTML = count;
+
+  // --------------------------------------------------
+  const add = document.getElementById("add");
+  function increment() {
+    count++;
+    total.innerHTML = count;
+  }
+  add.addEventListener("click", increment);
+
+  // ---------------------------------------------------
+  const sub = document.getElementById("sub");
+  function decrement() {
+    count--;
+    total.innerHTML = count;
+  }
+  sub.addEventListener("click", decrement);
+</script>
