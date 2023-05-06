@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Count App</title>
+    <style>
+      .count-container {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .count-value {
+        font-size: 3em;
+        margin-bottom: 20px;
+      }
+
+      button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="count-container">
+      <h1>Count App</h1>
+      <div class="count-value">0</div>
+      <button id="increment-btn">Increment</button>
+      <button id="decrement-btn">Decrement</button>
+    </div>
+
+    <script>
+      const countValue = document.querySelector(".count-value");
+      const incrementBtn = document.querySelector("#increment-btn");
+      const decrementBtn = document.querySelector("#decrement-btn");
+
+      let count = 0;
+
+      incrementBtn.addEventListener("click", () => {
+        count++;
+        countValue.innerHTML = count;
+      });
+
+      decrementBtn.addEventListener("click", () => {
+        if (count > 0) {
+          count--;
+          countValue.innerHTML = count;
+        }
+      });
+    </script>
+  </body>
+</html>

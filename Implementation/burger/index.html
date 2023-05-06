@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Burger Order</title>
+    <style>
+      /* CSS for the page layout */
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+      #container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-weight: normal;
+      }
+      /* CSS for the burger builder */
+      #builder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .ingredient {
+        width: 30%;
+        margin-bottom: 10px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      .ingredient img {
+        max-width: 100%;
+      }
+      .add-button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .add-button:hover {
+        background-color: #3e8e41;
+      }
+      /* CSS for the order summary */
+      #order-summary {
+        margin-top: 20px;
+      }
+      #order-summary h2 {
+        margin-top: 0;
+      }
+      .order-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      .order-item .name {
+        flex-basis: 50%;
+      }
+      .order-item .price {
+        flex-basis: 25%;
+        text-align: right;
+      }
+      .order-item .remove {
+        flex-basis: 25%;
+        text-align: right;
+      }
+      img {
+        height: 200px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Burger Order</h1>
+      <div id="builder">
+        <div class="ingredient">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Romaine_lettuce.jpg/255px-Romaine_lettuce.jpg"
+            alt="Lettuce"
+          />
+          <h3>Lettuce</h3>
+          <p>$0.50</p>
+          <button class="add-button" data-name="Lettuce" data-price="0.5">
+            Add
+          </button>
+        </div>
+        <div class="ingredient">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/330px-Tomato_je.jpg"
+            alt="Tomato"
+          />
+          <h3>Tomato</h3>
+          <p>$0.50</p>
+          <button class="add-button" data-name="Tomato" data-price="0.5">
+            Add
+          </button>
+        </div>
+        <div class="ingredient">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mixed_onions.jpg/330px-Mixed_onions.jpg"
+            alt="Onion"
+          />
+          <h3>Onion</h3>
+          <p>$0.50</p>
+          <button class="add-button" data-name="Onion" data-price="0.5">
+            Add
+          </button>
+        </div>
+        <div class="ingredient">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Emmental_%28fromage%29_01.jpg/480px-Emmental_%28fromage%29_01.jpg"
+            alt="Cheese"
+          />
+          <h3>Cheese</h3>
+          <p>$1.00</p>
+          <button class="add-button" data-name="Cheese" data-price="1.0">
+            Add
+          </button>
+        </div>
+        <div class="ingredient">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Pre-formed_hamburger.JPG/330px-Pre-formed_hamburger.JPG"
+            alt="Beef Patty"
+          />
+          <h3>Beef Patty</h3>
+          <p>$2.00</p>
+          <button class="add-button" data-name="Beef Patty" data-price="2.0">
+            Add
+          </button>
+        </div>
+        <div class="ingredient">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Sesame_seed_hamburger_buns.jpg/375px-Sesame_seed_hamburger_buns.jpg"
+            alt="Bun"
+          />
+          <h3>Bun</h3>
+          <p>$0.50</p>
+          <button class="add-button" data-name="Bun" data-price="0.5">
+            Add
+          </button>
+        </div>
+      </div>
+      <div id="order-summary">
+        <h2>Order Summary</h2>
+        <div id="order-items"></div>
+        <p>Total: $<span id="order-total">0</span></p>
+      </div>
+    </div>
+    <script>
+      // JavaScript for the burger builder
+      const ingredients = [];
+      const orderItems = [];
+      const addButtonElements = document.querySelectorAll(".add-button");
+      const orderItemsElement = document.getElementById("order-items");
+      const orderTotalElement = document.getElementById("order-total");
+      // Add event listeners to all the add buttons
+      addButtonElements.forEach((addButtonElement) => {
+        addButtonElement.addEventListener("click", () => {
+          const name = addButtonElement.dataset.name;
+          const price = parseFloat(addButtonElement.dataset.price);
+          const existingIngredient = ingredients.find((i) => i.name === name);
+          if (existingIngredient) {
+            existingIngredient.quantity++;
+            existingIngredient.totalPrice += price;
+          } else {
+            ingredients.push({
+              name,
+              quantity: 1,
+              price,
+              totalPrice: price,
+            });
+          }
+          updateOrderSummary();
+        });
+      });
+
+      // Remove an ingredient from the order
+      function removeIngredient(name) {
+        const ingredientIndex = ingredients.findIndex((i) => i.name === name);
+        if (ingredientIndex !== -1) {
+          ingredients.splice(ingredientIndex, 1);
+          updateOrderSummary();
+        }
+      }
+
+      // Update the order summary on the page
+      function updateOrderSummary() {
+        orderItemsElement.innerHTML = "";
+        orderTotalElement.textContent = ingredients
+          .reduce((total, ingredient) => total + ingredient.totalPrice, 0)
+          .toFixed(2);
+        ingredients.forEach((ingredient) => {
+          const orderItemElement = document.createElement("div");
+          orderItemElement.className = "order-item";
+          const nameElement = document.createElement("div");
+          nameElement.className = "name";
+          nameElement.textContent = ingredient.name;
+          orderItemElement.appendChild(nameElement);
+          const priceElement = document.createElement("div");
+          priceElement.className = "price";
+          priceElement.textContent = ingredient.totalPrice.toFixed(2);
+          orderItemElement.appendChild(priceElement);
+          const removeElement = document.createElement("div");
+          removeElement.className = "remove";
+          removeElement.innerHTML =
+            '<button class="remove-button">Remove</button>';
+          orderItemElement.appendChild(removeElement);
+          orderItemsElement.appendChild(orderItemElement);
+          const removeButtonElement =
+            orderItemElement.querySelector(".remove-button");
+          removeButtonElement.addEventListener("click", () =>
+            removeIngredient(ingredient.name)
+          );
+        });
+      }
+    </script>
+  </body>
+</html>

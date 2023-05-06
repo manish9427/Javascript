@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & SignUp</title>
+    <style>
+      #main {
+        display: flex;
+      }
+      #signup {
+        padding: 50px;
+        margin: 10px auto;
+        box-shadow: 0px 0px 10px black;
+        text-align: center;
+      }
+      #login {
+        text-align: center;
+        padding: 50px;
+        margin: 10px auto;
+        box-shadow: 0px 0px 10px black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <form id="signup" action="">
+        <h1>SignUp</h1>
+        <label for="">Username: </label>
+        <input type="text" id="user" name="username" /><br /><br />
+        <label for="">Password: </label>
+        <input type="password" id="pass" name="password" />
+        <button type="submit">Submit</button>
+      </form>
+
+      <form id="login" action="">
+        <h1>Login</h1>
+        <label for="">Username: </label>
+        <input type="text" id="user" name="name" /><br /><br />
+        <label for="">Password: </label>
+        <input type="password" id="pass" name="name" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+  const signup = document.getElementById("signup");
+  const login = document.getElementById("login");
+
+  signup.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const username = signup.elements.user.value;
+    const password = signup.elements.pass.value;
+
+    if (localStorage.getItem(username)) {
+      alert("Username is already taken. Please choose another.");
+      return;
+    }
+
+    localStorage.setItem(username, password);
+
+    alert("Sign up successful!");
+  });
+
+  login.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const username = login.elements.user.value;
+    const password = login.elements.pass.value;
+
+    if (!localStorage.getItem(username)) {
+      alert("Username does not exist.please sign up.");
+      return;
+    }
+
+    if (localStorage.getItem(username) !== password) {
+      alert("Password is incorrect. please choose another.");
+      return;
+    }
+    alert("Login Successful!");
+  });
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      .container {
+        margin: 0px auto;
+        width: 200px;
+        box-shadow: 0px 0px 10px black;
+        padding: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Count</h1>
+      <p id="display">Display</p>
+      <button id="add">ADD</button>
+      <button id="sub">SUB</button>
+    </div>
+  </body>
+</html>
+<script>
+  let count = document.querySelector("#display");
+  let add = document.querySelector("#add");
+  let sub = document.querySelector("#sub");
+
+  let x = 0;
+  count.innerHTML = x;
+
+  const addfun = () => {
+    x++;
+    count.innerHTML = x;
+  };
+  const subfun = () => {
+    if (x > 0) {
+      x--;
+    }
+    count.innerHTML = x;
+  };
+
+  add.addEventListener("click", addfun);
+  sub.addEventListener("click", subfun);
+</script>
