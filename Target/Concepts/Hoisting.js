@@ -1,9 +1,7 @@
-console.log(b);
 console.log(a);
+let b = 10;
 var a = 10;
-console.log(a);
-
-function hello() {
-  console.log(a + a);
-}
-hello();
+console.log(b + a);
+var a = 20;
+const c = a + b;
+console.log(c);
