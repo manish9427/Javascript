@@ -5,3 +5,9 @@ console.log(b + a);
 var a = 20;
 const c = a + b;
 console.log(c);
+
+func(a, b);
+function func(a, b) {
+  let c = a * b;
+  console.log(c);
+}
