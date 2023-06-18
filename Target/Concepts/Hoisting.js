@@ -10,4 +10,6 @@ func(a, b);
 function func(a, b) {
   let c = a * b;
   console.log(c);
+  const d = c * c;
+  console.log(d);
 }
