@@ -12,4 +12,5 @@ function func(a, b) {
   console.log(c);
   const d = c * c;
   console.log(d + d);
+  console.log(d);
 }
