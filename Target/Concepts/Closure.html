@@ -17,10 +17,19 @@
   </body>
 </html>
 <script>
-  document.getElementById("red").onclick = function () {
-    document.body.style.backgroundColor = "red";
-  };
-  document.getElementById("green").onclick = function () {
-    document.body.style.backgroundColor = "green";
-  };
+  //   document.getElementById("red").onclick = function () {
+  //     document.body.style.backgroundColor = "red";
+  //   };
+  //   document.getElementById("green").onclick = function () {
+  //     document.body.style.backgroundColor = "green";
+  //   };
+
+  function clickHandler(color) {
+    return function () {
+      document.body.style.backgroundColor = `${color}`;
+    };
+  }
+
+  document.getElementById("red").onclick = clickHandler("red");
+  document.getElementById("green").onclick = clickHandler("green");
 </script>
