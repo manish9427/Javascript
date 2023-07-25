@@ -18,3 +18,25 @@
 // block
 // gobal
 // functional
+
+var a = 10;
+{
+  console.log(a);
+}
+
+{
+  var b = 10;
+}
+console.log(b);
+
+// function fun() {
+//   var c = 10;
+// }
+// console.log(c);
+
+let dd = 10;
+{
+  console.log(dd);
+  var aa = 20;
+}
+console.log(aa);
