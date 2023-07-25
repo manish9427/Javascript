@@ -11,3 +11,34 @@ Ecommerce->cart,product,checkout-->local storage
 
 ---------------------cp
 Web basic form
+
+# --------------Youtube-----------------------
+
+## JavaScript
+
+- Defination
+- Java vs JavaScript
+- Execution Platform
+
+## DataType
+
+### Primitive
+
+- Number
+- String
+- Boolean
+- Null
+- Undefined
+- BigInt
+- Symbol
+
+### Non Primitive
+
+- Object
+- Array
+
+## var, let & const
+
+## Hoisting
+
+## Scope Chain and LexicalScope
