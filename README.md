@@ -42,3 +42,5 @@ Web basic form
 ## Hoisting
 
 ## Scope Chain and LexicalScope
+
+## Closure
