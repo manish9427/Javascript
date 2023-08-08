@@ -19,3 +19,10 @@ const oj = {
   },
 };
 console.log(oj.details());
+
+// inside function
+("use strict"); // undefined
+function xyz() {
+  return this;
+}
+console.log(xyz());
