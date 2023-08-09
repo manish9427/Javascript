@@ -39,7 +39,12 @@ Web basic form
 
 ## var, let & const
 
+let and const is a functional scope
+var is global scope
+
 ## Hoisting
+
+declaring the variable and function at the top of the scope
 
 ## Scope Chain and LexicalScope
 
