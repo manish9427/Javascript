@@ -65,3 +65,6 @@ add
   call is the inbuilt method (Function) in javaScript
   call method allows an object to use the method of another object
   we can access the function of other object into our new object
+
+  - apply =>
+    there is only differnce from call method is thst here we are passing the argument in array from were as we in call method pass it seprated by commas
