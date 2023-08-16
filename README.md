@@ -12,6 +12,10 @@ Ecommerce->cart,product,checkout-->local storage
 ---------------------cp
 Web basic form
 
+---
+
+1-
+
 # --------------YouTube-----------------------
 
 ## JavaScript
@@ -53,3 +57,11 @@ declaring the variable and function at the top of the scope
 ## This Keyword
 
 this is a keyword which refers to an object and it value depends on the senarios in which it is called
+add
+
+## Call , Apply and Bind
+
+- call =>
+  call is the inbuilt method (Function) in javaScript
+  call method allows an object to use the method of another object
+  we can access the function of other object into our new object
