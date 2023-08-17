@@ -13,3 +13,4 @@ const person2 = {
 
 const result = person1.fullName.apply(person2, ["Jhansi", "India"]);
 console.log(result);
+// console.log(result());
