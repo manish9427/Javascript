@@ -11,4 +11,5 @@ const person2 = {
   lastName: "Mishra",
 };
 
-console.log(person1.fullName.apply(person2, ["Jhansi", "India"]));
+const result = person1.fullName.apply(person2, ["Jhansi", "India"]);
+console.log(result);
