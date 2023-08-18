@@ -71,3 +71,29 @@ add
 
 - bind =>
   this method retun a value that is our function
+
+# Basic Topic (Fresher)
+
+- var,let and const (diffences)
+- loops(for ,while,forEach)
+- functions
+- if else
+- arrow functions
+- array
+- objects
+- event handling
+
+projects =>
+counter
+calculator
+
+# Advanced Topics
+
+- map, Reduce and filter
+- async await
+- promise
+- this keyword
+- destructuring
+- callBacks
+- hoisting
+- closure
