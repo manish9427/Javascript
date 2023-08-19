@@ -97,3 +97,12 @@ add
 
 - bind =>
   this method retun a value that is our function
+
+## map,filter and reduce
+
+these are the array methods
+
+- map =>
+  used for creating new array from the existing one
+  map(callback) ()=> { ... }
+  (element,index,array)=>{}
