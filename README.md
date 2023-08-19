@@ -106,3 +106,6 @@ these are the array methods
   used for creating new array from the existing one
   map(callback) ()=> { ... }
   (element,index,array)=>{}
+
+- filter =>
+  fiter out some value on the basis of our need and given condition
