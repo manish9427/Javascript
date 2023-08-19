@@ -109,3 +109,7 @@ these are the array methods
 
 - filter =>
   fiter out some value on the basis of our need and given condition
+
+- reduce =>
+  reduce tehe array into single value
+  (preValue,currValue)=>{}
