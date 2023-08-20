@@ -113,3 +113,25 @@ these are the array methods
 - reduce =>
   reduce tehe array into single value
   (preValue,currValue)=>{}
+
+## Promise
+
+promise is a special type of object in javascript
+it produce a value after a successful syncronous operation
+or an error if not successful because of network error , time out and so on
+
+let promise=new promise(functio(reject,resolve){
+//make a asynchronous call and either resolve or reject
+})
+
+- syncronous
+  console.log("1")
+  console.log("2")
+  console.log("3")
+
+- asynchronous
+  console.log("1")
+  setTimeout(()=>{
+  console.log("2");
+  },1000)
+  console.log("3")
