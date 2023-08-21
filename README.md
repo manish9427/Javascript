@@ -135,3 +135,14 @@ let promise=new promise(functio(reject,resolve){
   console.log("2");
   },1000)
   console.log("3")
+
+- promise object has some internal properties
+  1 - state =>
+  pending : initially when executor function starts the execution
+  fullfilled : when promise is resolved
+  rejected:when the promise is rejected
+
+  2 - result =>
+  undefined : initialy when the state value is pending
+  value : when resolve(value) is called
+  error : when reject(error) is called
