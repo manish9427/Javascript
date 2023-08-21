@@ -146,3 +146,5 @@ let promise=new promise(functio(reject,resolve){
   undefined : initialy when the state value is pending
   value : when resolve(value) is called
   error : when reject(error) is called
+
+Note => callback hell solution is promise

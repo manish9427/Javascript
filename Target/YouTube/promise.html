@@ -9,15 +9,21 @@
     <h1>Promise</h1>
   </body>
 </html>
-
 <script>
-  const promise = new promise(function (resolve, reject) {
+  let promise = new Promise(function (resolve, reject) {
     let anything = true;
     if (anything) {
-      resolve("somehing");
+      setTimeout(() => {
+        resolve("Sucessful");
+      });
     } else {
-      reject("not");
+      reject("unsuccessful");
     }
   });
-  console.log(promise);
+  // console.log(promise);
+  promise
+    .then((res) => {
+      console.log(res);
+    })
+    .catch(console.error());
 </script>
