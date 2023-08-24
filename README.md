@@ -47,8 +47,11 @@ calculator
 ## JavaScript
 
 - Defination
+  javascript is a programming language used for making dynamic web page
 - Java vs JavaScript
 - Execution Platform
+  crome
+  any browser
 
 ## DataType
 
@@ -79,6 +82,8 @@ declaring the variable and function at the top of the scope
 ## Scope Chain and LexicalScope
 
 ## Closure
+
+variable of outer function are accessableby inner function
 
 ## This Keyword
 
