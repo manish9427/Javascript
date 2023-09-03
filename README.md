@@ -42,6 +42,14 @@ calculator
 - hoisting
 - closure
 
+# ------------ Left Out Topics
+
+- Dom
+- Polyfills
+- oops(inheritanse, polymorphism,Encpsulation,Abstraction)
+- setTimeOut
+- SetInterval
+
 # --------------YouTube-----------------------
 
 ## JavaScript
