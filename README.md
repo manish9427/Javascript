@@ -49,6 +49,14 @@ calculator
 - oops(inheritanse, polymorphism,Encpsulation,Abstraction)
 - setTimeOut
 - SetInterval
+- === vs ==
+
+# ------------ Left Out Topics in details
+
+## === vs == (Equality operator)
+
+- == perform coercion -> make the operand of same type
+- === does not perform coercion
 
 # --------------YouTube-----------------------
 
