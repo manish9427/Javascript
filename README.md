@@ -169,3 +169,12 @@ let promise=new promise(functio(reject,resolve){
   error : when reject(error) is called
 
 Note => callback hell solution is promise
+
+# -------------------------Topic Not Covered
+
+## Event loop
+
+1- call stack
+2- web apis
+3- callback queue
+4- event loop
