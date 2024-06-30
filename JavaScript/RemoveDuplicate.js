@@ -14,7 +14,7 @@
 const fruits = ["apple", "mango", "grapes", "apple", "mango", "grapes"];
 
 // Convert the array to a Set to remove duplicates
-const uniqueFruitsSet = new Set(fruits); // HashSet in Java
+const uniqueFruitsSet = new Set(fruits); // HashSet in Java in JS
 
 // Convert the Set back to an array
 // const uniqueFruitsArray = Array.from(uniqueFruitsSet);
