@@ -1,9 +1,9 @@
-// forEach
-// map
-// filter
-// reduce
-// splice
-// slice
+// forEach -- done 
+// map -- done
+// filter --done
+// reduce --- done
+// splice -- done
+// slice  -- done
 
 const person = [
     {name: 'manish', age:23},
