@@ -1,0 +1,1 @@
+ // Closure is a feture in JS hich enable user to use variable and datatype of outer funtion 
