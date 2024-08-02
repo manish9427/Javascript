@@ -7,6 +7,6 @@
     }
  }
 
- 
+ 5
  const myClosure = fun();
  myClosure();
