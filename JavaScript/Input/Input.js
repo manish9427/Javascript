@@ -9,5 +9,5 @@ rl.question("Enter the Name: ",(userInput)=>{
 
 //Print Element
 for(let i=0;i<a.length;i++){
-    console.log(i);
+    console.log(i+1);
 }
