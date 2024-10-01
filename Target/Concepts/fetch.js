@@ -1,5 +1,0 @@
-/*
-try ctch block 
-promise
-
-*/
