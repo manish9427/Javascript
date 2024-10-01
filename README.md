@@ -9,10 +9,6 @@
 - objects
 - event handling
 
-projects =>
-counter
-calculator
-
 # Advanced Topics
 
 - map, Reduce and filter
@@ -33,8 +29,6 @@ calculator
 - SetInterval
 - === vs ==
 
-# ------------ Left Out Topics in details
-
 ## === vs == (Equality operator)
 
 - == perform coercion -> make the operand of same type
@@ -48,7 +42,7 @@ calculator
   javascript is a programming language used for making dynamic web page
 - Java vs JavaScript
 - Execution Platform
-  crome
+  chrome
   any browser
 
 ## DataType
