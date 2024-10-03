@@ -1,0 +1,9 @@
+require("readline")
+createInterface({input:process.stdin, output:process.stdout})
+question("",()=>{})
+close()
+
+typeof()
+charAt()
+parseInt()
+push()
