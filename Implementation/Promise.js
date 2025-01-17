@@ -1,1 +1,0 @@
-const  data = fetch("API").then(req).catch(error)
