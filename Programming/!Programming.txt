@@ -12,7 +12,11 @@ has, set, get, push
 Set()
 has, set, get, push
 
-slice()
+str.split('')
+arr.join('')
+arr.sort()
+str.slice(start,end)
+
 typeof()
 charAt()
 parseInt()
