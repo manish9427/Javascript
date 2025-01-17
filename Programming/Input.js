@@ -1,3 +1,13 @@
-const readline = require("readline");
-const rl = readline.createInterface({input:process.stdin,output:process.stdout });
-rl.question("Enter the Name: ", (name)=>{console.log("Name: ",name);})
+const readline = require('readline').createInterface({
+    input:process.stdin,
+    output:process.stdout
+});
+
+readline.question('Enter The Name: ',(name)=>{
+    myName(name);
+});
+
+const myName = function(name){
+    console.log(`Name you Entered: ${name}`);
+    readline.close();
+}
