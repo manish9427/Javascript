@@ -1,14 +1,14 @@
-# Input
+* Input
 require("readline")
 createInterface({input:process.stdin, output:process.stdout})
 question("",()=>{})
 close()
 
-# HashMap
+* HashMap
 Map()
 has, set, get, push
 
-# HashSet
+* HashSet
 Set()
 has, set, get, push
 
