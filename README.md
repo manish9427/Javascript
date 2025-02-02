@@ -1,21 +1,3 @@
----------------------InterView
-count
-fetch
-progress slider bar
-
------------------------lecture
-BMI Calculator -->Basic Function
-Link And Dislike --->Local Storage
-Todo --> Local Strorage
-Ecommerce->cart,product,checkout-->local storage
-
----------------------cp
-Web basic form
-
----
-
-1-
-
 # Basic Topic (Fresher)
 
 - var,let and const (diffences)
@@ -26,10 +8,6 @@ Web basic form
 - array
 - objects
 - event handling
-
-projects =>
-counter
-calculator
 
 # Advanced Topics
 
@@ -51,8 +29,6 @@ calculator
 - SetInterval
 - === vs ==
 
-# ------------ Left Out Topics in details
-
 ## === vs == (Equality operator)
 
 - == perform coercion -> make the operand of same type
@@ -66,7 +42,7 @@ calculator
   javascript is a programming language used for making dynamic web page
 - Java vs JavaScript
 - Execution Platform
-  crome
+  chrome
   any browser
 
 ## DataType
@@ -178,3 +154,85 @@ Note => callback hell solution is promise
 2- web apis
 3- callback queue
 4- event loop
+
+# Asked In Interview: - 
+
+Polymorphism  
+Inheritance 
+Promise 
+Hoisting 
+Closure  
+Arrow function vs normal function 
+setTimeout vs setInterval 
+Let var const 
+Async and await 
+Call back 
+Datatype in JS 
+Type Coercion  
+== and ===  
+Call by value and Reference 
+e.preventdefault() 
+polyfill for Reduce method and array 
+Object prototype/ prototypical inheritance  
+Event loop  
+Variables & Data Types 
+Conditional Statements and Loops 
+Functions 
+Arrow Functions and Normal Functions 
+Higher Order Functions 
+Callback Functions 
+Scope 
+This Keyword 
+Prototypes & Prototype Chain 
+Objects and Classes 
+OOP Concepts 
+ES6 Features 
+Modules (Import/Export) 
+Destructuring (Arrays & Objects) 
+Spread Operator 
+Slice and Splice 
+DOM Manipulation 
+Events 
+Asynchronous Programming 
+Event Loop & Call Stack 
+Promises 
+Async and Await 
+Try-Catch & Error Handling 
+Side Effects 
+Fetch API 
+JSON (JavaScript Object Notation) 
+Local Storage & Session Storage 
+Map, Set, WeakMap, WeakSet 
+Iterators and Generators 
+Regular Expressions (RegEx) 
+Debouncing & Throttling 
+Service Workers 
+Custom Events 
+Garbage Collection 
+Functional Programming Concepts 
+Polyfills 
+Arrow function 
+.map() 
+Destructuring 
+Spread operator 
+Ternary operator 
+Modules 
+
+
+# ES6+ Features: 
+Learn modern JavaScript features like arrow functions, destructuring, template literals, and modules. 
+
+# Classes and Objects: 
+Understand how React components work using JavaScript classes. 
+
+# Array Methods: 
+Master .map(), .filter(), .reduce(), and more to handle data efficiently. 
+
+# Event Handling: 
+Know how to manage events like clicks and inputs dynamically. 
+
+# Promises & Async/Await: 
+Handle API requests seamlessly with asynchronous JavaScript. 
+
+# State Management Basics: 
+Understand how variables change and affect your application. 
